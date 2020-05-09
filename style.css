@@ -417,3 +417,19 @@ justify-content: center;
     line-height: 1.5;
     color: rgba(255, 255, 255, .5);
 }
+
+.copyright {
+    padding: 20px 0;
+    background-color: #313454;
+}
+
+.copyright__text {
+    text-align: center;
+    font-size: 14px;
+    color: #808080;
+    line-height: 1.5;
+}
+
+.copyright__text span {
+    color: #fff;
+}
