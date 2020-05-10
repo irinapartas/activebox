@@ -335,6 +335,7 @@ justify-content: center;
 .reviews__item {
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .reviews__photo {
@@ -359,6 +360,15 @@ justify-content: center;
     padding-left: 80px;
 }
 
+.reviews__slider {
+    height: 500px;
+    overflow: hidden;
+}
+
+.reviews__slider.slick-initialized {
+    height: auto;
+}
+
 .reviews__text {
     margin-bottom: 25px;
     font-family: 'Cardo', sans-serif;
@@ -373,6 +383,42 @@ justify-content: center;
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 0 0 10px;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+.slick-dots li {
+    margin: 0 5px;
+}
+.slick-dots button {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background: #fff;
+    opacity: 0.5;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 0;
+    font-size: 0;
+    color: transparent;
+}
+
+.slick-dots button:focus {
+    outline: 0;
+}
+
+.slick-dots button .slick-active button {
+    opacity: 1;
 }
 
 .download {
@@ -496,6 +542,21 @@ justify-content: center;
 
     .nav {
         display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        text-align: right;
+        background-color: #31344e;
+        top: 0%;
+        right: 0;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .nav__link {
+        padding: 9px 15px;
     }
 
     .burger {
